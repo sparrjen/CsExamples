@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C4_WithMethods", "C4_WithMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C5_WithAgeCalculation", "C5_WithAgeCalculation\C5_WithAgeCalculation.csproj", "{90F95557-D4CC-4EF6-B866-8EA323D756C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C6_GettersAndSetters", "C6_GettersAndSetters\C6_GettersAndSetters.csproj", "{3BEE747D-2E29-4E2F-A2EB-D59C3AAECD1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{90F95557-D4CC-4EF6-B866-8EA323D756C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F95557-D4CC-4EF6-B866-8EA323D756C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F95557-D4CC-4EF6-B866-8EA323D756C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEE747D-2E29-4E2F-A2EB-D59C3AAECD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEE747D-2E29-4E2F-A2EB-D59C3AAECD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEE747D-2E29-4E2F-A2EB-D59C3AAECD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEE747D-2E29-4E2F-A2EB-D59C3AAECD1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
