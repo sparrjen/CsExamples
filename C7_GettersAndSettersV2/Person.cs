@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace C6_GettersAndSetters
+namespace C7_GettersAndSettersV2
 {
     class Person
     {
 
-        public string Name { get; private set; } 
-        public int Age => CalculateAge(); 
+        public string Name { get; private set; }
+        public int Age
+        {
+            get   //detta sätt att sätta get sker hos de som kommer ifrån java
+            {
+                int _age = DateTime.Now.Year - DateOfBirth.Year;
+                if (DateTime.Now.DayOfYear < DateOfBirth.DayOfYear)
+                    _age = Age - 1;
+
+                return _age;
+            }
+        }
+
+
         public string City { get; private set; }
         public DateTime DateOfBirth { get; private set; }
 
-        public Person()
-        {
-            
-        }
-        public Person(string name)
-        {
-            Name = name; 
-        }
-
+       
         public void AskForName()
         {
             Console.Write("Welcome! What's your name? ");
@@ -62,13 +66,6 @@ namespace C6_GettersAndSetters
             Console.WriteLine($"Oh cool! We are the same age I am also {Age}");
 
         }
-        public int CalculateAge()
-        {
-            int _age = DateTime.Now.Year - DateOfBirth.Year;
-            if (DateTime.Now.DayOfYear < DateOfBirth.DayOfYear)
-                _age = Age - 1;
-
-            return _age;
-        }
+      
     }
 }
