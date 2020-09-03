@@ -81,7 +81,7 @@ namespace C5_WithAgeCalculation
                 }
             }
 
-            Console.WriteLine($"Oh cool! We are the same age I am also {CalculateAge()}");
+            Console.WriteLine($"Oh cool! We are the same age I am also {CalculateAge()}!");
 
         }
         public int CalculateAge()
