@@ -7,6 +7,13 @@ namespace C13_Interfaces_2
     {
         static void Main(string[] args)
         {
+            var cart = SampleData.CartSampleItems();
+
+            foreach (var item in cart)
+                item.ShippingItem();
+
+
+
 
         }
     }
