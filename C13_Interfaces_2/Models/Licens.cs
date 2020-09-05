@@ -1,14 +1,19 @@
-﻿using System;
+﻿using C13_Interfaces_2.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace C13_Interfaces_2.Models
 {
-    class Licens
+    class Licens : ILicens
     {
-        public string ArticleNumber { get; set; }
+
         public string Name { get; set; }
         public int NumberOfLicenses { get; set; } = 1;
+        public string Id { get; set; }
+        public string Description { get; set; }
+
+        public bool OrderCompleted { get; private set; }
 
         public void ShippingItem()
         {
