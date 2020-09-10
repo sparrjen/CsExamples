@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="74991cd8-71d8-40a3-9a63-8f82d78d2a6d"
+    Name="4d111107-0c88-484c-bfa4-74ce965ea913"
     Publisher="CN=jenni"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="74991cd8-71d8-40a3-9a63-8f82d78d2a6d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="4d111107-0c88-484c-bfa4-74ce965ea913" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>UWP1_AsyncAwait</DisplayName>

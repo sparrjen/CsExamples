@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{10CBF566-DC3D-40DF-BF3C-20CCD1B7ABDF}</ProjectGuid>
+    <ProjectGuid>{88AC95BC-06DB-4A20-942C-83623F73D300}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UWP1_AsyncAwait</RootNamespace>
