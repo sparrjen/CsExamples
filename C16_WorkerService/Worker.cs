@@ -15,7 +15,7 @@ namespace C16_WorkerService
 
 
         private readonly ILogger<Worker> _logger;
-        private readonly string _url = "https://google.com";
+        private readonly string _url = "https://ecutbildning.se";
 
         private HttpClient _client;
         private HttpResponseMessage _result;
