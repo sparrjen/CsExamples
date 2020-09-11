@@ -46,5 +46,7 @@ namespace C16_WorkerService
                {
                    services.AddHostedService<Worker>();
                });
+
+        //ändrat till egen sökväg
     }
 }
