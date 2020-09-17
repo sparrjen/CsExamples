@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF2_DesignView.Models;
 
 namespace WPF2_DesignView
 {
@@ -25,6 +26,16 @@ namespace WPF2_DesignView
             InitializeComponent();
 
             
+        }
+
+        private void btnMessages_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MessageModel(); 
+        }
+
+        private void btnContacts_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ContactModel();
         }
     }
 }

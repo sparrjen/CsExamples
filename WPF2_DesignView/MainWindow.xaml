@@ -4,82 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF2_DesignView"
+        xmlns:models="clr-namespace:WPF2_DesignView.Models"
+        xmlns:views="clr-namespace:WPF2_DesignView.Views"
+       
+        
         mc:Ignorable="d"
         Title="Client" Height="720" Width="1200" WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
+
+    <Window.Resources>
+        <DataTemplate x:Name="ContactWiewTemplate" DataType="{x:Type models:ContactModel}">
+            <views:ContactViewModel DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="MessageWiewTemplate" DataType="{x:Type models:MessageModel}">
+            <views:MessageViewModel DataContext="{Binding}" />
+        </DataTemplate>
+    </Window.Resources>
+    
+    
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.9*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-
-
-        </Grid.RowDefinitions>
+        
 
         <Grid Grid.Column="0" Background="#FF4784DA" Grid.RowSpan="10" />
 
-        <Grid x:Name="mainMenu_Grid" Grid.Column="1" Background="#FFA2C7FF" Grid.RowSpan="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="183*"/>
-                <ColumnDefinition Width="67*"/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.ColumnSpan="2" AutomationProperties.Name="btnContact">
-                <Button Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="14" Foreground="White" Margin="0,30,150,0">
-
-                    <Grid>
-                        <TextBlock Text="Contacts"/>
-                    </Grid>
-                    
-                    
+        <Grid x:Name="mainMenu_Grid" Grid.Column="1" Background="#FFA2C7FF" >
+            <StackPanel>
+                <Button x:Name="btnMessages" Click="btnMessages_Click" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="White" Padding="20,15,10,10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE715;" FontSize="18"/>
+                        <TextBlock Margin="20,0,0,0" Text="Messages"/>
+                    </StackPanel>
                 </Button>
+                <Button x:Name="btnContacts" Click="btnContacts_Click" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="White" Padding="20,15,10,10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">                      
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE716;" FontSize="18"/>
+                        <TextBlock Margin="20,0,0,0" Text="Contacts"/>
+                    </StackPanel>                                     
+                </Button>
+                <Button x:Name="btnCalendar" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="White" Padding="20,15,10,10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE787;" FontSize="18"/>
+                        <TextBlock Margin="20,0,0,0" Text="Calendar"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnTasks" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="White" Padding="20,15,10,10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE9D5;" FontSize="18"/>
+                        <TextBlock Margin="20,0,0,0" Text="Tasks"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnSettings" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="White" Padding="20,15,10,10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE713;" FontSize="18"/>
+                        <TextBlock Margin="20,0,0,0" Text="Settings"/>
+                    </StackPanel>
+                </Button>
+                
             </StackPanel>
         </Grid>
 
-        <Grid x:Name="subMenu_Grid" Grid.Column="2" Background="#FFF3F9FF" Grid.RowSpan="10"  >
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="183*"/>
-                    <ColumnDefinition Width="67*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.ColumnSpan="2" AutomationProperties.Name="btnContact">
-                    <Button Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="14" Foreground="Black" Margin="0,30,150,0">
-
-                        <Grid>
-                            
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            
-                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="From"/>
-                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="2020-10-11"/>
-
-
-
-
-                    </Grid>
-
-
-                    </Button>
-                </StackPanel>
-            </Grid>
-
+        <Grid x:Name="subMenu_Grid" Grid.Column="2" Background="#FFF3F9FF" >
+           
 
         </Grid>
+
+        <ContentControl Grid.Column="3" Content="{Binding}"/>
+
+
+
+
+
+    </Grid>
 </Window>
 
     
